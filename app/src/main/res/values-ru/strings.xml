@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">Шагомер</string>
+  <string name="message_channel_name">Шагомер</string>
+  <string name="text_notification">Считаем шаги…</string>
+
+  <string name="text_steps">шаги</string>
+  <string name="text_not_available">Не доступно</string>
+
+  <string name="action_reset">Сброс</string>
+
+  <string name="sensor_accelerometer">Датчик: Акселерометр</string>
+  <string name="sensor_step_counter">Датчик: Счётчик шагов</string>
+
+</resources>

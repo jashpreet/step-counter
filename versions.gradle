@@ -1,0 +1,53 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.android_gradle_plugin = "3.2.1"
+versions.arch = "1.1.1"
+versions.constraint_layout = "1.1.3"
+versions.junit = "4.12"
+versions.kotlin = "1.3.20"
+versions.kotlinx_coroutines = "1.1.1"
+versions.room = "1.1.1"
+versions.test_espresso = "3.0.2"
+versions.test_runner = "1.0.2"
+versions.support = "28.0.0"
+versions.timber = "4.7.1"
+
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+
+deps.kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+deps.kotlinx_coroiutines =
+    "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.kotlinx_coroutines"
+
+deps.support_v4 = "com.android.support:support-v4:$versions.support"
+deps.support_appcompat = "com.android.support:appcompat-v7:$versions.support"
+deps.support_constraint_layout =
+    "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
+deps.arch_lifecycle_extensions = "android.arch.lifecycle:extensions:$versions.arch"
+
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+
+deps.room_runtime = "android.arch.persistence.room:runtime:$versions.room"
+deps.room_compiler = "android.arch.persistence.room:compiler:$versions.room"
+deps.test_room = "android.arch.persistence.room:testing:$versions.room"
+
+deps.test_junit = "junit:junit:4.12"
+deps.test_runner = "com.android.support.test:runner:$versions.test_runner"
+deps.test_espresso = "com.android.support.test.espresso:espresso-core:$versions.test_espresso"
+
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 19
+build_versions.target_sdk = 28
+build_versions.compile_sdk = 28
+build_versions.build_tools = "28.0.1"
+ext.build_versions = build_versions
+
+static def addRepos(RepositoryHandler handler) {
+  handler.google()
+  handler.jcenter()
+}
+
+ext.addRepos = this.&addRepos

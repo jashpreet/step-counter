@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion build_versions.compile_sdk
+  defaultConfig {
+    applicationId "com.nistix.stepcounter"
+    minSdkVersion build_versions.min_sdk
+    targetSdkVersion build_versions.target_sdk
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  kapt deps.room_compiler
+
+  implementation deps.kotlin_stdlib
+  implementation deps.kotlinx_coroiutines
+
+  implementation deps.support_v4
+  implementation deps.support_appcompat
+  implementation deps.support_constraint_layout
+  implementation deps.arch_lifecycle_extensions
+
+  implementation deps.room_runtime
+
+  implementation deps.timber
+}

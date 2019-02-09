@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">Step Counter</string>
+  <string name="message_channel_name">StepCounter</string>
+  <string name="text_notification">Counting…</string>
+
+  <string name="text_steps">steps</string>
+  <string name="text_not_available">Not available</string>
+
+  <string name="action_reset">Reset</string>
+
+  <string name="sensor_accelerometer">Sensor: Accelerometer</string>
+  <string name="sensor_step_counter">Sensor: StepCounter</string>
+
+</resources>
